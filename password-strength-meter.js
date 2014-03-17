@@ -11,7 +11,7 @@
   * =============================== */
 
   var StrengthMeter = function (element, options) {
-    this.init('tooltip', element, options)
+    this.init(input, strength_meter, options)
   }
 
   StrengthMeter.prototype = {
@@ -28,23 +28,23 @@
   , init: function (input, strength_meter, options) {
       this.$input = $(input);
       this.$strength_meter = $(strength_meter);
-      this.options = this.getOptions(options)
+      this.options = this.getOptions(options);
     }
   , getOptions: function (options) {
-      options = $.extend({}, $.fn.passwordStrengthMeter.defaults, this.$input.data(), options)
-      return options
+      options = $.extend({}, $.fn.passwordStrengthMeter.defaults, this.$input.data(), options);
+      return options;
     }
   , check: function () {
 
     }
-  }
+  };
 
  /* PASSWORD STRENGTH METER PLUGIN DEFINITION
   * ========================= */
 
   var old = $.fn.passwordStrengthMeter
 
-  $.fn.passwordStrengthMeter = function ( option ) {
+  $.fn.passwordStrengthMeter = function (option) {
     return this.each(function () {
       var $this = $(this)
         , data = $this.data('passwordStrengthMeter')
