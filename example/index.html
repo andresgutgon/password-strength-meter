@@ -6,21 +6,28 @@
     <title>Strength Meter example</title>
     <meta name="description" content="Password Strength Meter example">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="css/bootstrap.css">
   </head>
   <body>
-    <!-- Add your site or application content here -->
-    <form action="">
-      <input type="password" size="30" autocomplete="off">
-      <div class="js-strength-meter strength-meter">
-        <div class="strength-meter-label">
-          Strength:
-          <span class="js-strength-meter-copy strength-meter-label-copy"></span>
-        </div>
-        <div class="strength-meter-bar">
-          <div class="strength-meter-progress"></div>
-        </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        <form action="">
+          <input type="password" size="30" autocomplete="off">
+          <div class="js-strength-meter strength-meter">
+            <div class="strength-meter-label">
+              Strength:
+              <span class="js-strength-meter-copy strength-meter-label-copy"></span>
+            </div>
+            <div class="strength-meter-bar">
+              <div class="strength-meter-progress"></div>
+            </div>
+          </div>
+        </form>
       </div>
-    </form>
+    </div>
+  </div>
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="../password-strength-meter.js"></script>
