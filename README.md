@@ -1,4 +1,4 @@
-password-strength-meter
+Password Strength Meter
 =======================
 
 Give feedback to user with password strength
