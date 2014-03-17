@@ -63,6 +63,7 @@
     , good: 'Good'
     , strong: 'Strong'
     }
+  , strength_meter_copys_element: 'js-strength-meter-copy'
   }
 
 
