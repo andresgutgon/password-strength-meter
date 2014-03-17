@@ -7,14 +7,19 @@
     <meta name="description" content="Password Strength Meter example">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&subset=latin,cyrillic-ext,latin-ext,cyrillic' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/example.css">
   </head>
   <body>
   <div class="container">
     <div class="row">
-      <div class="col-md-6 col-md-offset-3">
+      <div class="col-md-6 col-md-offset-3 psm-example">
+        <h2>Password Strength Meter Example</h2>
         <form action="">
-          <input type="password" size="30" autocomplete="off">
+          <input class='js-password-input' type="password" size="30" autocomplete="off">
+          <br>
+          <br>
           <div class="js-strength-meter strength-meter">
             <div class="strength-meter-label">
               Strength:
