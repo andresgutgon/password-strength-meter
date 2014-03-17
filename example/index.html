@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Strength Meter example</title>
+    <meta name="description" content="Password Strength Meter example">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <!-- Add your site or application content here -->
+    <form action="">
+      <input type="password" size="30" autocomplete="off">
+      <div class="js-strength-meter strength-meter">
+        <div class="strength-meter-label">
+          Strength:
+          <span class="js-strength-meter-copy strength-meter-label-copy"></span>
+        </div>
+        <div class="strength-meter-bar">
+          <div class="strength-meter-progress"></div>
+        </div>
+      </div>
+    </form>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="../password-strength-meter.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
