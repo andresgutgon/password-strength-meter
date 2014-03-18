@@ -1,7 +1,7 @@
 Password Strength Meter
 =======================
 
-Give feedback to user with password strength
+Give feedback to users when are typing a password
 
 ![Strength Meter](https://f.cloud.github.com/assets/49499/2447754/9d3cc38c-ae9c-11e3-947e-dce7c32da441.png)
 
