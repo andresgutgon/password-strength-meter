@@ -3,7 +3,7 @@ Password Strength Meter
 
 Give feedback to user with password strength
 
-![Strength Meter]('https://f.cloud.github.com/assets/49499/2447745/82e457ca-ae9c-11e3-82a5-dab55c3df6ad.png')
+![Strength Meter]('https://f.cloud.github.com/assets/49499/2447754/9d3cc38c-ae9c-11e3-947e-dce7c32da441.png')
 
 
 The MIT License (MIT)
