@@ -1,0 +1,31 @@
+{
+  "name": "password-strength-meter",
+  "description": "Give feedback to users when are typing a password",
+  "version": "0.0.1",
+  "homepage": "https://github.com/andresgutgon/password-strength-meter",
+  "author": {
+    "name": "Andres Gutierrez",
+    "url": "http://usandolarueda.blogspot.com.es/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git:://github.com/andresgutgon/password-strength-meter.git"
+  },
+  "bugs": {
+    "url": "https://github.com/andresgutgon/password-strength-meter/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/andresgutgon/password-strength-meter/blob/master/LICENSE"
+    }
+  ],
+  "dependencies": {
+    "jQuery": "~1.10"
+  },
+  "keywords": [
+    "password",
+    "jquery",
+    "plugin"
+  ]
+}
