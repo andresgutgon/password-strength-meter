@@ -5,6 +5,29 @@ Give feedback to user with password strength
 
 ![Strength Meter](https://f.cloud.github.com/assets/49499/2447754/9d3cc38c-ae9c-11e3-947e-dce7c32da441.png)
 
+## Dependencies
+[jQuery](http://jquery.com/)
+
+## Instalation
+Download `password-strength-meter.js` file and put on your HTML after `jQuery`
+``` html
+<script src="../password-strength-meter.js"></script>
+```
+## Use
+Initialize the plugin in the field(s) you want to check password streng
+``` javascript
+  // This is the markup for password strength meter (Visual feedback)
+  var $strength_meter = $('.js-strength-meter');
+  
+  // Plugin initialization
+  $('.js-password-input').passwordStrengthMeter({
+    strength_meter: $strength_meter
+  , options: {
+    app_requirements: app_requirements
+  }
+  });
+```
+
 *****
 
 ## The MIT License (MIT)
