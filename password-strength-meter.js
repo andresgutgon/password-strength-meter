@@ -18,7 +18,7 @@
     constructor: StrengthMeter
 
   /**
-   * Init plugin with input field and streng meter markup
+   * Init plugin with input field and strength meter markup
    * @param  {jQuery} input
    * @param  {jQuery} strength_meter
    * @param  {Object} options
