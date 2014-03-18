@@ -28,6 +28,16 @@ Initialize the plugin in the field(s) you want to check password streng
   });
 ```
 
+## Options
+This are the options you can configure
+
+#### strength_meter_label_element
+Type: `String`
+Default: `.js-strength-meter-label`
+
+This is a DIV that must be inside Strength meter HTML
+
+
 *****
 
 ## The MIT License (MIT)
