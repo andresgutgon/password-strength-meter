@@ -37,6 +37,54 @@ Default: `.js-strength-meter-label`
 
 This is a DIV that must be inside Strength meter HTML
 
+#### strength_meter_copy_element
+Type: `String`
+Default: `.js-strength-meter-label`
+
+This is a DIV that must be inside Strength meter HTML. This is were the plugin put strength messages.
+
+#### min_length
+Type: `Integer`
+Default: 8
+
+This is the min length password must have. 
+
+#### good_length
+Type: `Integer`
+Default: 10
+
+#### ideal_length
+Type: `Integer`
+Default: 12
+
+#### copy_too_short
+Type: `String`
+Default: `Too short`
+
+Message when password is too short
+
+#### copy_app_requirements
+Type: `String`
+Default: `This password doesn\'t pass app requirements`
+
+Message when password doesn't pass your requirements
+
+#### copy_weak
+Type: `String`
+Default: `Weak`
+
+#### copy_fair
+Type: `String`
+Default: `Fair`
+
+#### copy_good
+Type: `String`
+Default: `Good`
+
+#### copy_strong
+Type: `String`
+Default: `Strong`
+
 
 *****
 
