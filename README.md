@@ -28,6 +28,20 @@ Initialize the plugin in the field(s) you want to check password streng
   });
 ```
 
+## Default Strength Meter HTLM markup
+You can use yours. And your custom CSS
+``` html
+  <div class="js-strength-meter strength-meter">
+    <div class="strength-meter-message">
+      <span class="js-strength-meter-label strength-meter-label">Strength </span>
+      <span class="js-strength-meter-copy strength-meter-copy"></span>
+    </div>
+    <div class="strength-meter-bar">
+      <div class="strength-meter-progress"></div>
+    </div>
+  </div>
+```
+
 ## Options
 This are the options you can configure
 
