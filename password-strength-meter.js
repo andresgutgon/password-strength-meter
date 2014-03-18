@@ -6,7 +6,7 @@
   "use strict"; // jshint ;_;
 
 
- /* TOOLTIP PUBLIC CLASS DEFINITION
+ /* PASSWORD STRENGTH METER PUBLIC CLASS DEFINITION
   * =============================== */
 
   var StrengthMeter = function (input, strength_meter, options) {
