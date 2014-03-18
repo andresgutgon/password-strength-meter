@@ -80,6 +80,12 @@ Default: `Too short`
 
 Message when password is too short
 
+#### copy_must_contain_number_and_letters
+Type: `String`
+Default: `Must contain numbers and letters`
+
+Message when password doesn't have numbers && letters
+
 #### copy_app_requirements
 Type: `String`
 Default: `This password doesn\'t pass app requirements`
