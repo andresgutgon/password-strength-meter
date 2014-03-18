@@ -39,7 +39,7 @@ This is a DIV that must be inside Strength meter HTML
 
 #### strength_meter_copy_element
 Type: `String`
-Default: `.js-strength-meter-label`
+Default: `.js-strength-meter-copy`
 
 This is a DIV that must be inside Strength meter HTML. This is were the plugin put strength messages.
 
