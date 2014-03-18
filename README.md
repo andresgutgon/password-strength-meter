@@ -76,6 +76,10 @@ Default: `Too short`
 
 Message when password is too short
 
+#### copy_must_not_contain_spaces
+Type: `String`
+Default: `Can't contain spaces`
+
 #### copy_must_contain_number_and_letters
 Type: `String`
 Default: `Must contain numbers and letters`
