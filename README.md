@@ -28,7 +28,7 @@ Initialize the plugin in the field(s) you want to check password streng
   });
   
   // Check password strength
-   $('.js-password-input').passwordStrengthMeter('check')
+   $('.js-password-input').passwordStrengthMeter('check');
 ```
 
 ## Default Strength Meter HTLM markup
