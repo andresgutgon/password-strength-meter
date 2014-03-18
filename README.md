@@ -3,6 +3,8 @@ Password Strength Meter
 
 Give feedback to user with password strength
 
+[Strength Meter]('example/images/screenshot.png')
+
 
 The MIT License (MIT)
 
