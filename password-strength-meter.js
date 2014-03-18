@@ -1,7 +1,6 @@
 /* ========================================================================
- * Password Strength Meter: password-strength-meter.js v0.0.1
+ * Password Strength Meter
  * ======================================================================== */
-
 !function ($) {
 
   "use strict"; // jshint ;_;
@@ -43,33 +42,41 @@
 
       $strength_meter_label.hide();
 
-      if (password === '' || password.length < this.options.min_length) {
+      if (password === '') {
+        $strength_meter_label.show();
+        $strength_meter_copy.text('');
+      } else if (password.match(/\s+/i)) {
+        $strength_meter_copy.text(this.options.copy_must_not_contain_spaces);
+
+      } else if (password.length < this.options.min_length && !password.match(/([a-z][0-9])/)) {
         $strength_meter_copy.text(this.options.copy_too_short);
+
+      } else if (!password.match(/[a-z]+/i) || !password.match(/[0-9]+/)) {
+        $strength_meter_copy.text(this.options.copy_must_contain_number_and_letters);
 
       } else if (app_requirements && typeof this.options.app_requirements === 'function' && !this.options.app_requirements(password)) {
         $strength_meter_copy.text(this.options.copy_app_requirements);
       } else {
         $strength_meter_label.show();
 
-        if (password.match(/[!,@,#,$,%,\^,&,*,?,_,~]/)) { score += 1; }
-        if (password.match(/([a-z])/)) { score += 1; }
+        if (password.length >= this.options.min_length) { score += 1; }
         if (password.match(/([A-Z])/)) { score += 1; }
-        if (password.match(/([0-9])/)) { score += 1; }
-        if (password.length >= this.options.min_length) { score += 2; }
-        if (password.length >= this.options.good_length) { score += 2; }
+        if (password.match(/[!,@,#,$,%,\^,&,*,?,_,~]/)) { score += 1; }
         if (password.length >= this.options.ideal_length) { score += 1; }
 
-        if (1 < score && score < 4) {
-          $strength_meter_copy.text(this.options.copy_weak);
-
-        } else if (4 <= score && score < 6) {
-          $strength_meter_copy.text(this.options.copy_fair);
-
-        } else if (6 <= score && score < 8) {
-          $strength_meter_copy.text(this.options.copy_good);
-
-        } else if (8 <= score) {
-          $strength_meter_copy.text(this.options.copy_strong);
+        switch(score) {
+          case 1:
+            $strength_meter_copy.text(this.options.copy_weak);
+            break;
+          case 2:
+            $strength_meter_copy.text(this.options.copy_fair);
+            break;
+          case 3:
+            $strength_meter_copy.text(this.options.copy_good);
+            break;
+          case 4:
+            $strength_meter_copy.text(this.options.copy_strong);
+            break;
         }
       }
 
@@ -104,9 +111,10 @@
       strength_meter_label_element: '.js-strength-meter-label'
     , strength_meter_copy_element: '.js-strength-meter-copy'
     , min_length: 8
-    , good_length: 10
     , ideal_length: 12
     , copy_too_short: 'Too short'
+    , copy_must_not_contain_spaces: 'Can not contain spaces'
+    , copy_must_contain_number_and_letters: 'Must contain numbers and letters'
     , copy_app_requirements: 'This password doesn\'t pass app requirements'
     , copy_weak: 'Weak'
     , copy_fair: 'Fair'
