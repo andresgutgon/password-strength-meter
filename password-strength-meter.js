@@ -38,16 +38,16 @@
       var score = 0
         , password = this.$input.val().trim()
         , app_requirements = this.options.app_requirements
-        , $strength_meter_copy = this.$strength_meter.find(this.options.strength_meter_copy)
-        , $strength_meter_label = this.$strength_meter.find(this.options.strength_meter_label);
+        , $strength_meter_copy = this.$strength_meter.find(this.options.strength_meter_copy_element)
+        , $strength_meter_label = this.$strength_meter.find(this.options.strength_meter_label_element);
 
       $strength_meter_label.hide();
 
       if (password === '' || password.length < this.options.min_length) {
-        $strength_meter_copy.text(this.options.strength_meter_copys.too_short);
+        $strength_meter_copy.text(this.options.copy_too_short);
 
       } else if (app_requirements && typeof this.options.app_requirements === 'function' && !this.options.app_requirements(password)) {
-        $strength_meter_copy.text(this.options.strength_meter_copys.app_requirements_copy);
+        $strength_meter_copy.text(this.options.copy_app_requirements);
       } else {
         $strength_meter_label.show();
 
@@ -60,16 +60,16 @@
         if (password.length >= this.options.ideal_length) { score += 1; }
 
         if (1 < score && score < 4) {
-          $strength_meter_copy.text(this.options.strength_meter_copys.weak);
+          $strength_meter_copy.text(this.options.copy_weak);
 
         } else if (4 <= score && score < 6) {
-          $strength_meter_copy.text(this.options.strength_meter_copys.fair);
+          $strength_meter_copy.text(this.options.copy_fair);
 
         } else if (6 <= score && score < 8) {
-          $strength_meter_copy.text(this.options.strength_meter_copys.good);
+          $strength_meter_copy.text(this.options.copy_good);
 
         } else if (8 <= score) {
-          $strength_meter_copy.text(this.options.strength_meter_copys.strong);
+          $strength_meter_copy.text(this.options.copy_strong);
         }
       }
 
@@ -101,19 +101,17 @@
   $.fn.passwordStrengthMeter.Constructor = StrengthMeter
 
   $.fn.passwordStrengthMeter.defaults = {
-      strength_meter_label: '.js-strength-meter-label'
-    , strength_meter_copy: '.js-strength-meter-copy'
+      strength_meter_label_element: '.js-strength-meter-label'
+    , strength_meter_copy_element: '.js-strength-meter-copy'
     , min_length: 8
     , good_length: 10
     , ideal_length: 12
-    , strength_meter_copys: {
-        too_short: 'Too short'
-      , app_requirements_copy: 'This password doesn\'t pass app requirements'
-      , weak: 'Weak'
-      , fair: 'Fair'
-      , good: 'Good'
-      , strong: 'Strong'
-      }
+    , copy_too_short: 'Too short'
+    , copy_app_requirements: 'This password doesn\'t pass app requirements'
+    , copy_weak: 'Weak'
+    , copy_fair: 'Fair'
+    , copy_good: 'Good'
+    , copy_strong: 'Strong'
   }
 
  /* PASSWORD STRENGTH METER NO CONFLICT
