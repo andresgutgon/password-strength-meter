@@ -3,7 +3,7 @@ Password Strength Meter
 
 Give feedback to user with password strength
 
-![Strength Meter]('https://raw.github.com/andresgutgon/password-strength-meter/master/example/images/screenshot.png')
+![Strength Meter]('https://github.com/andresgutgon/password-strength-meter/blob/master/example/images/screenshot.png?raw=true')
 
 
 The MIT License (MIT)
