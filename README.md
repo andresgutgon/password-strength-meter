@@ -66,10 +66,6 @@ Default: 8
 
 This is the min length password must have. 
 
-#### good_length
-Type: `Integer`
-Default: 10
-
 #### ideal_length
 Type: `Integer`
 Default: 12
