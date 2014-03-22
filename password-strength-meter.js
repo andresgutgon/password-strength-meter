@@ -82,6 +82,16 @@
 
       this.$strength_meter.attr("data-score", score);
     }
+
+    /**
+     * restore strength meter to initial state
+     */
+  , reset: function() {
+      var $strength_meter_copy = this.$strength_meter.find(this.options.strength_meter_copy_element);
+
+      $strength_meter_copy.text('');
+      this.$strength_meter.attr("data-score", 0);
+    }
   };
 
  /* PASSWORD STRENGTH METER PLUGIN DEFINITION
