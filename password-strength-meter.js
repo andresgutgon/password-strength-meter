@@ -33,6 +33,26 @@
       options = $.extend({}, $.fn.passwordStrengthMeter.defaults, this.$input.data(), options);
       return options;
     }
+    /**
+     * Check minimun required requirements
+     *
+     * @return {Boolean}
+     */
+  , checkIsValid: function() {
+      var password = this.$input.val().trim()
+        , valid = true;
+      if (password === '') {
+        valid = false;
+      } else if (password.match(/\s+/i)) {
+        valid = false;
+      } else if (password.length < this.options.min_length && !password.match(/([a-z][0-9])/)) {
+        valid = false;
+      } else if (!password.match(/[a-z]+/i) || !password.match(/[0-9]+/)) {
+        valid = false;
+      }
+
+      this.$input.data('is_valid', valid);
+    }
   , check: function() {
       var score = 0
         , password = this.$input.val().trim()

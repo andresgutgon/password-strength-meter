@@ -18,7 +18,7 @@ Initialize the plugin in the field(s) you want to check password streng
 ``` javascript
   // This is the markup for password strength meter (Visual feedback)
   var $strength_meter = $('.js-strength-meter');
-  
+
   // Plugin initialization
   $('.js-password-input').passwordStrengthMeter({
     strength_meter: $strength_meter
@@ -26,9 +26,13 @@ Initialize the plugin in the field(s) you want to check password streng
     app_requirements: app_requirements
   }
   });
-  
+
   // Check password strength
    $('.js-password-input').passwordStrengthMeter('check');
+
+  // Check password is Valid
+   $('.js-password-input').passwordStrengthMeter('checkIsValid');
+   $('.js-password-input').data('is_valid');
 ```
 
 ## Default Strength Meter HTLM markup
@@ -64,7 +68,7 @@ This is a DIV that must be inside Strength meter HTML. This is were the plugin p
 Type: `Integer`
 Default: 8
 
-This is the min length password must have. 
+This is the min length password must have.
 
 #### ideal_length
 Type: `Integer`
