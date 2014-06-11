@@ -41,16 +41,23 @@
      */
   , checkIsValid: function() {
       var password = this.$input.val().trim()
-        , valid = true;
+        , valid = true
+        , has_spaces = false
+        , too_short = false
+        , only_letters_or_only_numbers = false
+        , is_empty = false;
+
       if (password === '') {
-        valid = false;
+        is_empty = true;
       } else if (password.match(/\s+/i)) {
-        valid = false;
+        has_spaces = true;
       } else if (password.length < this.options.min_length) {
-        valid = false;
+        too_short = true;
       } else if (!password.match(/([a-z][0-9])/)) {
-        valid = false;
-      } else if (!password.match(/[a-z]+/i) || !password.match(/[0-9]+/)) {
+        only_letters_or_only_numbers = true;
+      }
+
+      if (is_empty || has_spaces || too_short || only_letters_or_only_numbers) {
         valid = false;
       }
 
