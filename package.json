@@ -1,7 +1,7 @@
 {
   "name": "password-strength-meter",
   "description": "Give feedback to users when are typing a password",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "homepage": "https://github.com/andresgutgon/password-strength-meter",
   "author": {
     "name": "Andres Gutierrez",

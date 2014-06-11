@@ -71,10 +71,10 @@
       } else if (password.match(/\s+/i)) {
         $strength_meter_copy.text(this.options.copy_must_not_contain_spaces);
 
-      } else if (password.length < this.options.min_length && !password.match(/([a-z][0-9])/)) {
+      } else if (password.length < this.options.min_length) {
         $strength_meter_copy.text(this.options.copy_too_short);
 
-      } else if (!password.match(/[a-z]+/i) || !password.match(/[0-9]+/)) {
+      } else if (!password.match(/([a-z][0-9])/)) {
         $strength_meter_copy.text(this.options.copy_must_contain_number_and_letters);
 
       } else if (app_requirements && typeof this.options.app_requirements === 'function' && !this.options.app_requirements(password)) {
