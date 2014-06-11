@@ -33,6 +33,7 @@
       options = $.extend({}, $.fn.passwordStrengthMeter.defaults, this.$input.data(), options);
       return options;
     }
+
     /**
      * Check minimun required requirements
      *
@@ -45,7 +46,9 @@
         valid = false;
       } else if (password.match(/\s+/i)) {
         valid = false;
-      } else if (password.length < this.options.min_length && !password.match(/([a-z][0-9])/)) {
+      } else if (password.length < this.options.min_length) {
+        valid = false;
+      } else if (!password.match(/([a-z][0-9])/)) {
         valid = false;
       } else if (!password.match(/[a-z]+/i) || !password.match(/[0-9]+/)) {
         valid = false;
