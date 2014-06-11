@@ -34,6 +34,17 @@
       return options;
     }
 
+  /**
+   * Check if string contains numbers and letters
+   *
+   * @param  {String} password
+   *
+   * @return  {Boolean}
+   */
+  , includeNumbersAndLetters: function (password) {
+      return /[a-z]+/i.test(password) && /[0-9]+/.test(password);
+    }
+
     /**
      * Check minimun required requirements
      *
@@ -53,7 +64,7 @@
         has_spaces = true;
       } else if (password.length < this.options.min_length) {
         too_short = true;
-      } else if (!password.match(/([a-z][0-9])/)) {
+      } else if (!this.includeNumbersAndLetters(password)) {
         only_letters_or_only_numbers = true;
       }
 
@@ -81,7 +92,7 @@
       } else if (password.length < this.options.min_length) {
         $strength_meter_copy.text(this.options.copy_too_short);
 
-      } else if (!password.match(/([a-z][0-9])/)) {
+      } else if (!this.includeNumbersAndLetters(password)) {
         $strength_meter_copy.text(this.options.copy_must_contain_number_and_letters);
 
       } else if (app_requirements && typeof this.options.app_requirements === 'function' && !this.options.app_requirements(password)) {
